@@ -12,14 +12,14 @@ namespace CafeTest
     [TestClass]
     public class CafeTest
     {
-        private Menu _item;
+        private MenuItem _item;
         private MenuRepository _repo;
 
         [TestInitialize]
         public void Arrange()
         {
             _repo = new MenuRepository();
-            _item = new Menu(1, "cheeseburger", "Our spin on the All-American Classic, with fries and drink included.", new List<string> { "bun", "patty", "cheese", "lettuce", "tomato", "pickle" }, 4.99m);
+            _item = new MenuItem(1, "cheeseburger", "Our spin on the All-American Classic, with fries and drink included.", new List<string> { "bun", "patty", "cheese", "lettuce", "tomato", "pickle" }, 4.99m);
             _repo.AddMenuItem(_item);
         }
 
@@ -40,7 +40,7 @@ namespace CafeTest
         [TestMethod]
         public void GetMenuItemByName_ShouldReturnCorrectItem()
         {
-            Menu searchedItem = _repo.GetMenuItemByName("cheeseburger");
+            MenuItem searchedItem = _repo.GetMenuItemByName("cheeseburger");
             Assert.AreEqual("cheeseburger", searchedItem.MealName);
         }
 
@@ -62,12 +62,12 @@ namespace CafeTest
         public void DisplayMenuItems_ShouldReturnFullMenuList()
         {
             //Arrange
-            Menu testItem = new Menu();
+            MenuItem testItem = new MenuItem();
             MenuRepository testRepo = new MenuRepository();
             testRepo.AddMenuItem(testItem);
 
             //Act
-            List<Menu> testMenu = testRepo.DisplayMenuItems();
+            List<MenuItem> testMenu = testRepo.DisplayMenuItems();
             bool menuHasItems = testMenu.Contains(testItem);
 
             //Assert

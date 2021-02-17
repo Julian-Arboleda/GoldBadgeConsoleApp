@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CafeRepo
 {
-    public class Menu
+    public class MenuItem
     {
 
         public string MealName { get; set; }
@@ -16,10 +16,10 @@ namespace CafeRepo
         public decimal Price { get; set; }
 
         //Empty Constructor
-        public Menu() { }
+        public MenuItem() { }
 
         //Filled Constructor
-        public Menu(int number, string name, string description, List<string> listOfIngredients, decimal price)
+        public MenuItem(int number, string name, string description, List<string> listOfIngredients, decimal price)
         {
             MealNumber = number;
             MealName = name;

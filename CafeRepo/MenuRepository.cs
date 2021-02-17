@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace CafeRepo
 {
-    class MenuRepo
+    public class MenuRepository
     {
-        private List<Menu> _menuDirectory = new List<Menu>();
+        private List<MenuItem> _menuDirectory = new List<MenuItem>();
 
-        public void AddMenuItem(Menu item)
+        public void AddMenuItem(MenuItem item)
         {
             _menuDirectory.Add(item);
         }
 
-        public Menu GetMenuItemByName(string name)
+        public MenuItem GetMenuItemByName(string name)
         {
-            foreach (Menu item in _menuDirectory)
+            foreach (MenuItem item in _menuDirectory)
             {
                 if (item.MealName.ToLower() == name.ToLower())
                 {
@@ -27,13 +27,13 @@ namespace CafeRepo
             return null;
         }
 
-        public bool DeleteMenuItem(Menu item)
+        public bool DeleteMenuItem(MenuItem item)
         {
             bool wasDeleted = _menuDirectory.Remove(item);
             return wasDeleted;
         }
 
-        public List<Menu> DisplayMenuItems()
+        public List<MenuItem> DisplayMenuItems()
         {
             return _menuDirectory;
         }

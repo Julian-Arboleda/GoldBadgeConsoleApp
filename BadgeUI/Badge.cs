@@ -10,8 +10,7 @@ namespace BadgeUI
     {
         static void Main(string[] args)
         {
-            BadgeUI ui = new BadgeUI();
-            Run(ui);
+            
         }
     }
 }

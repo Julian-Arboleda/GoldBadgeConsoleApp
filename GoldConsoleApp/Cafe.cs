@@ -10,7 +10,7 @@ namespace GoldConsoleApp
     {
         static void Main(string[] args)
         {
-            ProgramUI ui = new ProgramUI();
+            CafeUI ui = new CafeUI();
             ui.Run();
         }
     }
