@@ -15,11 +15,10 @@ namespace _02_ClaimTest
         public void Arrange()
         {
             _claimRepo = new ClaimsRepo();
-            _claim = new Claims(1, ClaimType.Car, "Car accident on 465", 400.00m, new DateTime(2018, 04, 25), new DateTime(2018, 04, 27));
+            _claim = new Claims(1, ClaimType.Car, "Car accident on 465", 400.00m, new DateTime(2021, 02, 15), new DateTime(2021, 03, 27));
             _claimRepo.EnterNewClaim(_claim);
         }
 
-        //Methods: SeeAllClaims, SeeNextClaim, DealWithClaim, EnterNewClaim
 
         [TestMethod]
         public void SeeAllClaims_ShouldDisplayAllClaims()
@@ -40,7 +39,6 @@ namespace _02_ClaimTest
         public void SeeNextClaim_ShouldShowNextClaim()
         {
             //Arrange   //Peek
-            //_claimRepo.EnterNewClaim(_claim);    done in TestInitialize to put _claim into the Queue
 
             //Act
             Claims nextClaim = _claimRepo.SeeNextClaim();

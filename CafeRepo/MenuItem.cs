@@ -15,10 +15,8 @@ namespace CafeRepo
         public List<string> ListOfIngredients { get; set; }
         public decimal Price { get; set; }
 
-        //Empty Constructor
         public MenuItem() { }
 
-        //Filled Constructor
         public MenuItem(int number, string name, string description, List<string> listOfIngredients, decimal price)
         {
             MealNumber = number;

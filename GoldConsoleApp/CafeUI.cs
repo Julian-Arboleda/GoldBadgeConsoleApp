@@ -116,7 +116,7 @@ namespace GoldConsoleApp
             Console.WriteLine("Please enter the name of the menu item you wish to delete: ");
             MenuItem itemDeleted = _repo.GetMenuItemByName(Console.ReadLine());
 
-            _repo.DeleteMenuItem(itemDeleted);
+            _repo.DeleteMenuItem(itemDeleted); ;
             Console.WriteLine("Press any key to return to the main screen...");
             Console.ReadKey();
         }

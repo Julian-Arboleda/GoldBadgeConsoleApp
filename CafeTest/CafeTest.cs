@@ -19,16 +19,13 @@ namespace CafeTest
         public void Arrange()
         {
             _repo = new MenuRepository();
-            _item = new MenuItem(1, "cheeseburger", "Our spin on the All-American Classic, with fries and drink included.", new List<string> { "bun", "patty", "cheese", "lettuce", "tomato", "pickle" }, 4.99m);
+            _item = new MenuItem(1, "Arepas", "Corn meal griddle served with your choice of meat and cheese and includes a side of plantains and your choice of jarritos. This Colombian entree is a fan favorite in the Komodo Cafe", new List<string> { "corn meal griddle", "meat", "cheese", "plantains" }, 8.99m);
             _repo.AddMenuItem(_item);
         }
 
         [TestMethod]
         public void AddMenuItem_ShouldReturnAreEqual()
         {
-            //Arrange       //adding the item up above in TestInitialize, so no need to do it again here
-            //_repo.AddMenuItem(_item);
-
             //Act
             int expected = 1;
             int actual = _repo.DisplayMenuItems().Count;
@@ -40,8 +37,8 @@ namespace CafeTest
         [TestMethod]
         public void GetMenuItemByName_ShouldReturnCorrectItem()
         {
-            MenuItem searchedItem = _repo.GetMenuItemByName("cheeseburger");
-            Assert.AreEqual("cheeseburger", searchedItem.MealName);
+            MenuItem searchedItem = _repo.GetMenuItemByName("Arepas");
+            Assert.AreEqual("Arepas", searchedItem.MealName);
         }
 
         [TestMethod]

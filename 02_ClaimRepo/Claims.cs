@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _02_ClaimRepo
 {
-    public enum ClaimType { Car, Home, Theft };
+    public enum ClaimType { Car = 1, Home, Theft };
     public class Claims
     {
         public int ClaimID { get; set; }
