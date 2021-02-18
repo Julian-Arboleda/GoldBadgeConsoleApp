@@ -27,33 +27,25 @@ namespace _02_ClaimTest
             ClaimsRepo testRepo = new ClaimsRepo();
             testRepo.EnterNewClaim(testClaim);
 
-            //Act
             Queue<Claims> testQueue = testRepo.SeeAllClaims();
             bool directoryHasClaims = testQueue.Contains(testClaim);
 
-            //Assert
             Assert.IsTrue(directoryHasClaims);
         }
 
         [TestMethod]
         public void SeeNextClaim_ShouldShowNextClaim()
         {
-            //Arrange   //Peek
-
-            //Act
             Claims nextClaim = _claimRepo.SeeNextClaim();
 
-            //Assert
             Assert.AreEqual(_claimRepo.SeeNextClaim(), _claim);
         }
 
         [TestMethod]
         public void DealWithClaim_ShouldRemoveClaim()
         {
-            //Arrange   //Dequeue
-            Claims ClaimA = new Claims(2, ClaimType.Home, "House fire in kitchen", 4000.00m, new DateTime(2018, 04, 11), new DateTime(2018, 04, 20));
+            Claims ClaimA = new Claims(2, ClaimType.Home, "House fire in kitchen", 4000.00m, new DateTime(20201, 02, 11), new DateTime(2021, 03, 10));
 
-            //Act
             _claimRepo.EnterNewClaim(ClaimA);
             _claimRepo.DealWithClaim();
 
@@ -67,8 +59,7 @@ namespace _02_ClaimTest
         [TestMethod]
         public void EnterNewClaim_ShouldAddClaim()
         {
-            //Arrange   //already entered this claim in the TestInitialize phase
-            //_claimRepo.EnterNewClaim(_claim);
+            //Arrange -TestInitialize
 
             //Act
             int expected = 1;

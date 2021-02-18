@@ -27,7 +27,7 @@ namespace _02_ClaimUI
                     "1. See All Claims \n" +
                     "2. Take Care of Next Claim \n" +
                     "3. Enter a New Claim \n" +
-                    "4. Exit Menu");
+                    "4. Exit Menu \n");
                 string userInput = Console.ReadLine();
                 switch (userInput)
                 {
@@ -129,7 +129,7 @@ namespace _02_ClaimUI
             Console.WriteLine("Enter the Claim Type: \n" +
                 "1. Car \n" +
                 "2. Home \n" +
-                "3. Theft");
+                "3. Theft\n");
             int claimType = int.Parse(Console.ReadLine());
             claimAdded.TypeOfClaim = (ClaimType)claimType;
 
@@ -155,9 +155,9 @@ namespace _02_ClaimUI
 
         private void SeedList()
         {
-            _02_ClaimRepo.Claims claimA = new _02_ClaimRepo.Claims(1, ClaimType.Car, "Car accident on 465", 400.00m, new DateTime(2018, 04, 25), new DateTime(2018, 04, 27));
-            _02_ClaimRepo.Claims claimB = new _02_ClaimRepo.Claims(2, ClaimType.Home, "House fire in kitchen", 4000.00m, new DateTime(2018, 04, 11), new DateTime(2018, 04, 17));
-            _02_ClaimRepo.Claims claimC = new _02_ClaimRepo.Claims(3, ClaimType.Theft, "Stolen pancakes", 4.00m, new DateTime(2018, 04, 27), new DateTime(2018, 06, 28));
+            _02_ClaimRepo.Claims claimA = new _02_ClaimRepo.Claims(1, ClaimType.Car, "Tree falls on house", 7000.00m, new DateTime(2021, 02, 16), new DateTime(2021, 02, 16));
+            _02_ClaimRepo.Claims claimB = new _02_ClaimRepo.Claims(2, ClaimType.Home, "Hit and run", 3000.00m, new DateTime(2021, 02, 14), new DateTime(2021, 02, 17));
+            _02_ClaimRepo.Claims claimC = new _02_ClaimRepo.Claims(3, ClaimType.Theft, "Stolen rusty bicycle", 15.00m, new DateTime(2021, 02, 17), new DateTime(2021, 04, 10));
 
             _claimRepo.EnterNewClaim(claimA);
             _claimRepo.EnterNewClaim(claimB);
