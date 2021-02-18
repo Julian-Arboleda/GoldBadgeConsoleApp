@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace BadgeRepo
 {
-    public class Badges
+    public class Badge
     {
+        public int BadgeId { get; set; }
+        public List<string> DoorNames { get; set; }
+
+        public Badge() { }
+        public Badge(int badgeId, List<string> doorNames)
+        {
+            BadgeId = badgeId;
+            DoorNames = doorNames;
+        }
     }
 }

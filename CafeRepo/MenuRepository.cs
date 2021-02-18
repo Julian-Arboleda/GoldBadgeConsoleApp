@@ -8,7 +8,7 @@ namespace CafeRepo
 {
     public class MenuRepository
     {
-        private List<MenuItem> _menuDirectory = new List<MenuItem>();
+        readonly private List<MenuItem> _menuDirectory = new List<MenuItem>();
 
         public void AddMenuItem(MenuItem item)
         {

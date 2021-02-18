@@ -9,7 +9,7 @@ namespace _02_ClaimUI
 {
     class ClaimUI
     {
-        private ClaimsRepo _claimRepo = new ClaimsRepo();
+        readonly private ClaimsRepo _claimRepo = new ClaimsRepo();
 
         public void Run()
         {
@@ -156,7 +156,7 @@ namespace _02_ClaimUI
         private void SeedList()
         {
             _02_ClaimRepo.Claims claimA = new _02_ClaimRepo.Claims(1, ClaimType.Car, "Tree falls on house", 7000.00m, new DateTime(2021, 02, 16), new DateTime(2021, 02, 16));
-            _02_ClaimRepo.Claims claimB = new _02_ClaimRepo.Claims(2, ClaimType.Home, "Hit and run", 3000.00m, new DateTime(2021, 02, 14), new DateTime(2021, 02, 17));
+            _02_ClaimRepo.Claims claimB = new _02_ClaimRepo.Claims(2, ClaimType.Home, "Hit and run", 2000.00m, new DateTime(2021, 02, 14), new DateTime(2021, 02, 17));
             _02_ClaimRepo.Claims claimC = new _02_ClaimRepo.Claims(3, ClaimType.Theft, "Stolen rusty bicycle", 15.00m, new DateTime(2021, 02, 17), new DateTime(2021, 04, 10));
 
             _claimRepo.EnterNewClaim(claimA);

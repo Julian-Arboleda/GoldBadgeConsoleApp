@@ -8,7 +8,7 @@ namespace _02_ClaimRepo
 {
    public class ClaimsRepo
     {
-        private Queue<Claims> _claimDirectory = new Queue<Claims>();
+       readonly private Queue<Claims> _claimDirectory = new Queue<Claims>();
 
         public Queue<Claims> SeeAllClaims()
         {

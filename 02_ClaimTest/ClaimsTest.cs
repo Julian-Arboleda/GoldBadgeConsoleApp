@@ -15,7 +15,7 @@ namespace _02_ClaimTest
         public void Arrange()
         {
             _claimRepo = new ClaimsRepo();
-            _claim = new Claims(1, ClaimType.Car, "Car accident on 465", 400.00m, new DateTime(2021, 02, 15), new DateTime(2021, 03, 27));
+            _claim = new Claims(1, ClaimType.Car, "Tree falls on house", 7000.00m, new DateTime(2021, 02, 16), new DateTime(2021, 02, 16));
             _claimRepo.EnterNewClaim(_claim);
         }
 
@@ -44,7 +44,7 @@ namespace _02_ClaimTest
         [TestMethod]
         public void DealWithClaim_ShouldRemoveClaim()
         {
-            Claims ClaimA = new Claims(2, ClaimType.Home, "House fire in kitchen", 4000.00m, new DateTime(20201, 02, 11), new DateTime(2021, 03, 10));
+            Claims ClaimA = new Claims(2, ClaimType.Home, "Hit and run", 2000.00m, new DateTime(2021, 02, 11), new DateTime(2021, 02, 16));
 
             _claimRepo.EnterNewClaim(ClaimA);
             _claimRepo.DealWithClaim();

@@ -9,7 +9,7 @@ namespace GoldConsoleApp
 {
     class CafeUI
     {
-        private MenuRepository _repo = new MenuRepository();
+       readonly private MenuRepository _repo = new MenuRepository();
 
         public void Run()
         {
